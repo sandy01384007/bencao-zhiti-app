@@ -2,6 +2,8 @@
 
 轻量化、平民化 AI 中医健康自测工具
 
+**在线安装指南**：见 [INSTALL.md](./INSTALL.md)
+
 ## 产品定位
 - 拍照舌象 AI 诊断 + 九种体质测评 + 个性化中医养生方案
 - 无医疗诊断资质，仅做健康参考与养生科普
@@ -26,12 +28,26 @@
 5. **个人中心**
    - 隐私政策、用户协议、关于我们
 
-## 使用方法
-直接用手机浏览器打开 `index.html` 即可，或部署到任意静态服务器。
+## 快速开始
 
-推荐：
-- 用手机 Chrome / Safari 打开
-- 添加到主屏幕，体验接近原生 APP
+### 1. 本地体验
+下载本仓库的 `index.html`（完整 APP 文件），用手机浏览器直接打开即可。
+
+或：
+```bash
+git clone https://github.com/sandy01384007/bencao-zhiti-app.git
+cd bencao-zhiti-app
+python3 -m http.server 8080
+# 访问 http://localhost:8080
+```
+
+### 2. 部署到 Vercel
+1. 登录 vercel.com → New Project
+2. 导入本仓库
+3. Framework 选 Other，直接 Deploy
+4. 获得在线链接，手机可「添加到主屏幕」
+
+详细步骤见 [INSTALL.md](./INSTALL.md)
 
 ## UI 规范
 - 主色：茶绿色 `#4A7C59`
@@ -50,8 +66,12 @@
 - 分享海报生成
 - 方案收藏
 
+## Skill 支持
+本项目已封装为 Grok Skill：`bencao-zhiti`  
+可在支持 Skill 的环境中直接调用，用于生成、定制、部署同类 APP。
+
 ## 技术说明
-纯前端实现（HTML + CSS + JS），无后端依赖。
+纯前端实现（HTML + CSS + JS），无后端依赖。  
 舌诊结果为演示模拟，正式产品需接入真实视觉模型 + 大模型解读。
 
 ---
